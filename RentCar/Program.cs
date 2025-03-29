@@ -26,7 +26,7 @@ namespace RentCar
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(options =>
             {
-                options.SwaggerDoc("v1", new OpenApiInfo { Title = "My Web Api project", Version = "V1" });
+                options.SwaggerDoc("v1", new OpenApiInfo { Title = "Car Rent Service", Version = "V1" });
                 options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     Name = "Authorization",

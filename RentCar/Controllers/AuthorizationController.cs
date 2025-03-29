@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using RentCar.Interfaces;
 using RentCar.Models;
 using RentCar.Models.DTO_s.User;
+using System.Net;
 
 namespace RentCar.Controllers
 {
@@ -18,15 +19,27 @@ namespace RentCar.Controllers
         }
 
         [HttpPost("Login")]
-        public async Task<ServiceResponse<string>> Login(UserLoginDTO dto)
+        public async Task<IActionResult> Login(UserLoginDTO dto)
         {
-            return await _authorizationService.LoginAsync(dto);
+            var response = await _authorizationService.LoginAsync(dto);
+
+            if (response.StatusCode == HttpStatusCode.NotFound)
+                return NotFound(response);
+            else if (response.StatusCode == HttpStatusCode.Unauthorized)
+                return Unauthorized(response);
+            
+            return Ok(response);
         }
 
         [HttpPost("Register")]
-        public async Task<ServiceResponse<int>> Register(UserRegisterDTO dto)
+        public async Task<IActionResult> Register(UserRegisterDTO dto)
         {
-            return await _authorizationService.RegisterAsync(dto);
+            var response = await _authorizationService.RegisterAsync(dto);
+
+            if (response.StatusCode == HttpStatusCode.Conflict)
+                return Conflict(response);
+
+            return CreatedAtAction(nameof(Register), new { id = response.Data }, response);
         }
     }
 }

@@ -61,7 +61,7 @@ namespace RentCar.Services
         {
             ServiceResponse<string> response = new ServiceResponse<string>();
 
-            User user = await _context.users.FirstOrDefaultAsync(x => x.Email.ToLower() == dto.Email.ToLower());
+            var user = await _context.users.FirstOrDefaultAsync(x => x.Email.ToLower() == dto.Email.ToLower());
 
             if (user is null)
             {
@@ -80,6 +80,7 @@ namespace RentCar.Services
                 var result = GenerateTokens(user, dto.StaySignedIn);
                 response.Data = result.AccessToken;
                 response.StatusCode = HttpStatusCode.OK;
+                response.Message = "User logged in successfully";
             }
 
             if(dto.StaySignedIn)
@@ -139,7 +140,8 @@ namespace RentCar.Services
             List<Claim> claims = new List<Claim>()
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Email, user.Email)
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.Name, user.FirstName)
             };
 
             SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.GetSection("JWTOptions:Secret").Value ?? string.Empty));
@@ -167,7 +169,8 @@ namespace RentCar.Services
             List<Claim> claims = new List<Claim>()
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Email, user.Email)
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.Name, user.FirstName)
             };
 
             SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.GetSection("JWTOptions:Secret").Value ?? string.Empty));

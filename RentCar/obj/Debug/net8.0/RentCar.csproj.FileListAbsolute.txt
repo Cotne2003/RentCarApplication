@@ -145,3 +145,4 @@ C:\Users\Tsotne\OneDrive\Desktop\RentCar\RentCar\bin\Debug\net8.0\runtimes\win\l
 C:\Users\Tsotne\OneDrive\Desktop\RentCar\RentCar\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\Tsotne\OneDrive\Desktop\RentCar\RentCar\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\Tsotne\OneDrive\Desktop\RentCar\RentCar\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Tsotne\OneDrive\Desktop\RentCar\RentCar\obj\Debug\net8.0\RentCar.sourcelink.json

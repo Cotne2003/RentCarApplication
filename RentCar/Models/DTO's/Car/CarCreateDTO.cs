@@ -38,15 +38,6 @@ namespace RentCar.Models.DTO_s.Car
         public string Transmission { get; set; }
 
         [Required]
-        [MaxLength(100)]
-        public string CreatedBy { get; set; }
-
-        [Required]
-        [EmailAddress]
-        [MaxLength(255)]
-        public string CreatedByEmail { get; set; }
-
-        [Required]
         [Range(1, 100)]
         public int FuelCapacity { get; set; }
 

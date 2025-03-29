@@ -41,9 +41,11 @@ namespace RentCar.Middlewares
                 _ => HttpStatusCode.InternalServerError,
             };
 
-            var errorRes = new ServiceResponse<object>
+            res.StatusCode = (int)statusCode;
+
+            var errorRes = new
             {
-                StatusCode = statusCode,
+                StatusCode = res.StatusCode,
                 Message = ex.GetFullMessage(),
             };
 

@@ -12,8 +12,8 @@ using RentCar.Models;
 namespace RentCar.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250328103037_addedUserMessagesAndFacoriteCars")]
-    partial class addedUserMessagesAndFacoriteCars
+    [Migration("20250330140014_InitialMigration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -35,29 +35,25 @@ namespace RentCar.Migrations
 
                     b.Property<string>("Brand")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Capacity")
                         .HasColumnType("int");
 
                     b.Property<string>("City")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("CreatedBy")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CreatedByEmail")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("FuelCapacity")
                         .HasColumnType("int");
@@ -82,54 +78,33 @@ namespace RentCar.Migrations
 
                     b.Property<string>("Model")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Multiplier")
                         .HasColumnType("int");
 
                     b.Property<string>("OwnerPhoneNumber")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("Transmission")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
 
                     b.Property<int>("Year")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.ToTable("cars");
-                });
-
-            modelBuilder.Entity("RentCar.Models.Entities.FavoriteCar", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("CarId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CarId");
-
                     b.HasIndex("UserId");
 
-                    b.ToTable("favoriteCars");
+                    b.ToTable("cars");
                 });
 
             modelBuilder.Entity("RentCar.Models.Entities.Message", b =>
@@ -142,8 +117,11 @@ namespace RentCar.Migrations
 
                     b.Property<string>("MessageText")
                         .IsRequired()
-                        .HasMaxLength(1000)
-                        .HasColumnType("nvarchar(1000)");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SenderUserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
@@ -165,18 +143,15 @@ namespace RentCar.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<byte[]>("PasswordHash")
                         .IsRequired()
@@ -188,8 +163,7 @@ namespace RentCar.Migrations
 
                     b.Property<string>("PhoneNumber")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RefreshToken")
                         .HasColumnType("nvarchar(max)");
@@ -202,21 +176,13 @@ namespace RentCar.Migrations
                     b.ToTable("users");
                 });
 
-            modelBuilder.Entity("RentCar.Models.Entities.FavoriteCar", b =>
+            modelBuilder.Entity("RentCar.Models.Entities.Car", b =>
                 {
-                    b.HasOne("RentCar.Models.Entities.Car", "Car")
-                        .WithMany("FavoriteCars")
-                        .HasForeignKey("CarId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("RentCar.Models.Entities.User", "User")
-                        .WithMany("FavoriteCars")
+                        .WithMany("Cars")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Car");
 
                     b.Navigation("User");
                 });
@@ -224,7 +190,7 @@ namespace RentCar.Migrations
             modelBuilder.Entity("RentCar.Models.Entities.Message", b =>
                 {
                     b.HasOne("RentCar.Models.Entities.User", "User")
-                        .WithMany("Message")
+                        .WithMany("Messages")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -232,16 +198,11 @@ namespace RentCar.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("RentCar.Models.Entities.Car", b =>
-                {
-                    b.Navigation("FavoriteCars");
-                });
-
             modelBuilder.Entity("RentCar.Models.Entities.User", b =>
                 {
-                    b.Navigation("FavoriteCars");
+                    b.Navigation("Cars");
 
-                    b.Navigation("Message");
+                    b.Navigation("Messages");
                 });
 #pragma warning restore 612, 618
         }

@@ -6,11 +6,11 @@ namespace RentCar.Models.DTO_s.Car
     {
         [Required]
         [MaxLength(100)]
-        public string Brand { get; set; }
+        public required string Brand { get; set; }
 
         [Required]
         [MaxLength(100)]
-        public string Model { get; set; }
+        public required string Model { get; set; }
 
         [Required]
         [Range(1950, 2100)]
@@ -35,7 +35,7 @@ namespace RentCar.Models.DTO_s.Car
 
         [Required]
         [MaxLength(50)]
-        public string Transmission { get; set; }
+        public required string Transmission { get; set; }
 
         [Required]
         [Range(1, 100)]
@@ -43,7 +43,7 @@ namespace RentCar.Models.DTO_s.Car
 
         [Required]
         [MaxLength(100)]
-        public string City { get; set; }
+        public required string City { get; set; }
 
         [Required]
         public double Latitude { get; set; }
@@ -54,6 +54,6 @@ namespace RentCar.Models.DTO_s.Car
         [Required]
         [Phone]
         [MaxLength(20)]
-        public string OwnerPhoneNumber { get; set; }
+        public required string OwnerPhoneNumber { get; set; }
     }
 }

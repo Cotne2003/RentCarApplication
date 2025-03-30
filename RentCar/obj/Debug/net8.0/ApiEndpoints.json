@@ -160,5 +160,31 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentCar.Controllers.MessageController",
+    "Method": "CreateAsync",
+    "RelativePath": "api/Message",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "RentCar.Models.DTO_s.Message.MessageCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentCar.Controllers.UserController",
+    "Method": "GetUserAsync",
+    "RelativePath": "api/User",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using RentCar.Models.DTO_s.Car;
+using RentCar.Models.DTO_s.Message;
+using RentCar.Models.DTO_s.User;
 using RentCar.Models.Entities;
 
 namespace RentCar
@@ -10,6 +12,8 @@ namespace RentCar
         {
             CreateMap<Car, CarCreateDTO>().ReverseMap();
             CreateMap<Car, CarDTO>().ReverseMap();
+            CreateMap<User, UserDTO>().ReverseMap();
+            CreateMap<Message, MessageDTO>().ReverseMap();
         }
     }
 }

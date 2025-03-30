@@ -37,7 +37,7 @@ namespace RentCar.Services
 
             if (string.IsNullOrEmpty(userEmail) || string.IsNullOrEmpty(userName))
             {
-                new ServiceResponse<int>
+                return new ServiceResponse<int>
                 {
                     Message = "User authentication required",
                     StatusCode = HttpStatusCode.Unauthorized
@@ -81,7 +81,7 @@ namespace RentCar.Services
         public async Task<ServiceResponse<List<string>>> GetAllCitiesAsync()
         {
             List<string> cities = await _context.cars
-                .Select(x => x.City)
+                .Select(x => x.City.ToLower())
                 .Distinct()
                 .ToListAsync();
             return new ServiceResponse<List<string>>

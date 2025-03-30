@@ -8,7 +8,9 @@ namespace RentCar.Models.Entities
         public int Id { get; set; }
         public required string MessageText { get; set; }
         public required string SenderUserName { get; set; }
+
+        [ForeignKey("User")]
         public int UserId { get; set; }
-        public required User User { get; set; }
+        public User User { get; set; }
     }
 }

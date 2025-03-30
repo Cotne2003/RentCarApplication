@@ -65,8 +65,8 @@ namespace RentCar
                     ValidateAudience = true,
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
-                    ValidIssuer = jwtOptions.Issuer,
-                    ValidAudience = jwtOptions.Audience,
+                    ValidIssuer = jwtOptions?.Issuer,
+                    ValidAudience = jwtOptions?.Audience,
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtOptions.Secret))
                 };
             });
@@ -96,8 +96,6 @@ namespace RentCar
 
             app.UseAuthentication();
             app.UseAuthorization();
-
-
 
             app.MapControllers();
 

@@ -8,6 +8,7 @@ namespace RentCar.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class MessageController : ControllerBase
     {
         private readonly IMessageService _messageService;
@@ -18,7 +19,6 @@ namespace RentCar.Controllers
         }
 
         [HttpPost]
-        [Authorize]
         public async Task<IActionResult> CreateAsync(MessageCreateDTO dto)
         {
             var response = await _messageService.CreateAsync(dto, User);

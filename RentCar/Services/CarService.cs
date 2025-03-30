@@ -32,6 +32,15 @@ namespace RentCar.Services
                 };
             }
 
+            if (!int.TryParse(user.FindFirst(ClaimTypes.NameIdentifier)?.Value, out int userId))
+            {
+                return new ServiceResponse<int>
+                {
+                    Message = "Not authorized",
+                    StatusCode = HttpStatusCode.Unauthorized
+                };
+            }
+
             string userEmail = user.FindFirst(ClaimTypes.Email)?.Value;
             string userName = user.Identity.Name;
 
@@ -48,6 +57,7 @@ namespace RentCar.Services
 
             mappedCar.CreatedByEmail = userEmail;
             mappedCar.CreatedBy = userName;
+            mappedCar.UserId = userId;
 
             await _context.cars.AddAsync(mappedCar);
             await _context.SaveChangesAsync();

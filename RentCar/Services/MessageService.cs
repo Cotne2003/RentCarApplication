@@ -42,6 +42,15 @@ namespace RentCar.Services
 
             var receiverUser = await _context.users.FindAsync(dto.UserId);
 
+            if (receiverUser.Id == dto.UserId)
+            {
+                return new ServiceResponse<MessageCreateDTO>
+                {
+                    Message = "You Can not send message yourself",
+                    StatusCode = HttpStatusCode.BadRequest
+                };
+            }
+
             if (receiverUser is null)
             {
                 return new ServiceResponse<MessageCreateDTO>
@@ -54,12 +63,14 @@ namespace RentCar.Services
             Message message = new Message
             {
                 MessageText = dto.MessageText,
-                SenderUserName = senderUserName
+                SenderUserName = senderUserName,
+                UserId = dto.UserId
             };
 
+
+            receiverUser.Messages ??= new List<Message>();
             receiverUser.Messages.Add(message);
 
-            _context.users.Update(receiverUser);
             await _context.messages.AddAsync(message);
             await _context.SaveChangesAsync();
 

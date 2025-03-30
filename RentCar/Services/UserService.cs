@@ -30,7 +30,7 @@ namespace RentCar.Services
                 };
             }
 
-            var userInf = await _context.users.Include(x => x.Messages).FirstOrDefaultAsync(x => x.Id == userId);
+            var userInf = await _context.users.Include(x => x.Messages).Include(x => x.Cars).FirstOrDefaultAsync(x => x.Id == userId);
 
             var mappedUser = _mapper.Map<UserDTO>(userInf);
 

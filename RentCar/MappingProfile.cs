@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using RentCar.Models.DTO_s;
 using RentCar.Models.DTO_s.Car;
+using RentCar.Models.DTO_s.FavoriteCar;
 using RentCar.Models.DTO_s.Message;
 using RentCar.Models.DTO_s.Purchase;
 using RentCar.Models.DTO_s.User;
@@ -18,6 +20,8 @@ namespace RentCar
             CreateMap<Message, MessageCreateDTO>().ReverseMap();
             CreateMap<Purchase, PurchaseCreateDTO>().ReverseMap();
             CreateMap<Purchase, PurchaseDTO>().ReverseMap();
+            CreateMap<FavoriteCar, FavoriteCarCreateDTO>().ReverseMap();
+            CreateMap<FavoriteCar, FavoriteCarDTO>().ReverseMap();
         }
     }
 }

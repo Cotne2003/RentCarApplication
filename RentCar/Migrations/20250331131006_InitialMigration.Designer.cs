@@ -12,7 +12,7 @@ using RentCar.Models;
 namespace RentCar.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250331100640_InitialMigration")]
+    [Migration("20250331131006_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -96,6 +96,30 @@ namespace RentCar.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("cars");
+                });
+
+            modelBuilder.Entity("RentCar.Models.Entities.FavoriteCar", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CarId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CarId")
+                        .IsUnique();
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("favoriteCars");
                 });
 
             modelBuilder.Entity("RentCar.Models.Entities.Message", b =>
@@ -208,6 +232,25 @@ namespace RentCar.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("RentCar.Models.Entities.FavoriteCar", b =>
+                {
+                    b.HasOne("RentCar.Models.Entities.Car", "Car")
+                        .WithOne("FavoriteCar")
+                        .HasForeignKey("RentCar.Models.Entities.FavoriteCar", "CarId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("RentCar.Models.Entities.User", "User")
+                        .WithMany("FavoriteCars")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Car");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("RentCar.Models.Entities.Message", b =>
                 {
                     b.HasOne("RentCar.Models.Entities.User", "User")
@@ -240,12 +283,16 @@ namespace RentCar.Migrations
 
             modelBuilder.Entity("RentCar.Models.Entities.Car", b =>
                 {
+                    b.Navigation("FavoriteCar");
+
                     b.Navigation("Purchase");
                 });
 
             modelBuilder.Entity("RentCar.Models.Entities.User", b =>
                 {
                     b.Navigation("Cars");
+
+                    b.Navigation("FavoriteCars");
 
                     b.Navigation("Messages");
 

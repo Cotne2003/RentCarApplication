@@ -81,6 +81,7 @@ namespace RentCar
             builder.Services.AddScoped<IMessageService, MessageService>();
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<IPurchaseService, PurchaseService>();
+            builder.Services.AddScoped<IFavoriteCarService, FavoriteCarService>();
 
             var app = builder.Build();
 

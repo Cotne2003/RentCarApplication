@@ -26,5 +26,6 @@ namespace RentCar.Models.Entities
         public User User { get; set; }
 
         public Purchase? Purchase { get; set; }
+        public FavoriteCar? FavoriteCar { get; set; }
     }
 }

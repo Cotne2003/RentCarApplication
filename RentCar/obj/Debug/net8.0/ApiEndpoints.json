@@ -172,6 +172,38 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "RentCar.Controllers.FavoriteCarController",
+    "Method": "CreateAsync",
+    "RelativePath": "api/FavoriteCar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "RentCar.Models.DTO_s.FavoriteCarCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentCar.Controllers.FavoriteCarController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/FavoriteCar/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "RentCar.Controllers.MessageController",
     "Method": "CreateAsync",
     "RelativePath": "api/Message",

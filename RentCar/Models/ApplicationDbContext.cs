@@ -11,6 +11,7 @@ namespace RentCar.Models
         public DbSet<User> users { get; set; }
         public DbSet<Message> messages { get; set; }
         public DbSet<Purchase> purchases { get; set; }
+        public DbSet<FavoriteCar> favoriteCars { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -28,6 +29,12 @@ namespace RentCar.Models
                 .WithMany(u => u.Purchases)
                 .HasForeignKey(p => p.UserId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<FavoriteCar>()
+                .HasOne(fc => fc.User)
+                .WithMany(u => u.FavoriteCars)
+                .HasForeignKey(fc => fc.UserId)
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

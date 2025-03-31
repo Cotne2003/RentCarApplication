@@ -90,6 +90,31 @@ namespace RentCar.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "favoriteCars",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CarId = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_favoriteCars", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_favoriteCars_cars_CarId",
+                        column: x => x.CarId,
+                        principalTable: "cars",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_favoriteCars_users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "users",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
                 name: "purchases",
                 columns: table => new
                 {
@@ -121,6 +146,17 @@ namespace RentCar.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_favoriteCars_CarId",
+                table: "favoriteCars",
+                column: "CarId",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_favoriteCars_UserId",
+                table: "favoriteCars",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_messages_UserId",
                 table: "messages",
                 column: "UserId");
@@ -140,6 +176,9 @@ namespace RentCar.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "favoriteCars");
+
             migrationBuilder.DropTable(
                 name: "messages");
 

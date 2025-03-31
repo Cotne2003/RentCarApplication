@@ -16,5 +16,6 @@ namespace RentCar.Models.Entities
         public List<Car> Cars { get; set; } = new List<Car>();
         public List<Message> Messages { get; set; } = new List<Message>();
         public List<Purchase> Purchases { get; set; } = new List<Purchase>();
+        public List<FavoriteCar> FavoriteCars { get; set; } = new List<FavoriteCar>();
     }
 }

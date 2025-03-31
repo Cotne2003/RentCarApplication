@@ -11,9 +11,9 @@ namespace RentCar.Controllers
     [ApiController]
     public class AuthorizationController : ControllerBase
     {
-        private readonly IAuthorization _authorizationService;
+        private readonly IAuthorizationService _authorizationService;
 
-        public AuthorizationController(IAuthorization authorizationService)
+        public AuthorizationController(IAuthorizationService authorizationService)
         {
             _authorizationService = authorizationService;
         }

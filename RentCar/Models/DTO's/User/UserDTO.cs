@@ -1,5 +1,6 @@
 ﻿using RentCar.Models.DTO_s.Car;
 using RentCar.Models.DTO_s.Message;
+using RentCar.Models.DTO_s.Purchase;
 using RentCar.Models.Entities;
 
 namespace RentCar.Models.DTO_s.User
@@ -13,5 +14,6 @@ namespace RentCar.Models.DTO_s.User
         public string PhoneNumber { get; set; }
         public List<MessageDTO> Messages { get; set; }
         public List<CarDTO> Cars { get; set; }
+        public List<PurchaseDTO> Purchases { get; set; }
     }
 }

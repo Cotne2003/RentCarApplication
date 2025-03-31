@@ -29,6 +29,13 @@ namespace RentCar.Controllers
 
             return Ok(rsponse);
         }
+        [HttpGet("Popular")]
+        public async Task<IActionResult> GetPopularAsync()
+        {
+            var rsponse = await _carService.GetPopularAsync();
+
+            return Ok(rsponse);
+        }
 
         [HttpPost]
         [Authorize]

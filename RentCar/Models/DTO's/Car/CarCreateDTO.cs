@@ -38,18 +38,12 @@ namespace RentCar.Models.DTO_s.Car
         public required string Transmission { get; set; }
 
         [Required]
-        [Range(1, 100)]
+        [Range(1, 90)]
         public int FuelCapacity { get; set; }
 
         [Required]
         [MaxLength(100)]
         public required string City { get; set; }
-
-        [Required]
-        public double Latitude { get; set; }
-
-        [Required]
-        public double Longitude { get; set; }
 
         [Required]
         [Phone]

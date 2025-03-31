@@ -77,9 +77,10 @@ namespace RentCar
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             builder.Services.AddScoped<ICarService, CarService>();
-            builder.Services.AddScoped<IAuthorization, AuthorizationService>();
+            builder.Services.AddScoped<IAuthorizationService, AuthorizationService>();
             builder.Services.AddScoped<IMessageService, MessageService>();
             builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<IPurchaseService, PurchaseService>();
 
             var app = builder.Build();
 

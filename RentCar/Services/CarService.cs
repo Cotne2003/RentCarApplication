@@ -72,7 +72,7 @@ namespace RentCar.Services
 
         public async Task<ServiceResponse<List<CarDTO>>> GetAllAsync()
         {
-            List<CarDTO> cars = await _context.cars.ProjectTo<CarDTO>(_mapper.ConfigurationProvider).ToListAsync();
+            List<CarDTO> cars = await _context.cars.Include(x => x.User).Include(x => x.Purchase).ProjectTo<CarDTO>(_mapper.ConfigurationProvider).ToListAsync();
             return new ServiceResponse<List<CarDTO>> { Data = cars, Message = "Cars returned successfully", StatusCode = HttpStatusCode.OK };
         }
 
@@ -182,6 +182,23 @@ namespace RentCar.Services
             {
                 Data = car,
                 Message = "Car returned successfully",
+                StatusCode = HttpStatusCode.OK
+            };
+        }
+
+        public async Task<ServiceResponse<List<CarDTO>>> GetPopularAsync()
+        {
+            List<CarDTO> cars = await _context.cars
+                .Include(x => x.User)
+                .Include(x => x.Purchase)
+                .Where(x => x.Purchase == null)
+                .ProjectTo<CarDTO>(_mapper.ConfigurationProvider)
+                .ToListAsync();
+
+            return new ServiceResponse<List<CarDTO>>
+            {
+                Data = cars,
+                Message = "Cars returned successfully",
                 StatusCode = HttpStatusCode.OK
             };
         }

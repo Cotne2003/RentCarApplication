@@ -67,18 +67,9 @@ namespace RentCar.Migrations
                     b.Property<DateTime?>("LastModifiedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<double>("Latitude")
-                        .HasColumnType("float");
-
-                    b.Property<double>("Longitude")
-                        .HasColumnType("float");
-
                     b.Property<string>("Model")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Multiplier")
-                        .HasColumnType("int");
 
                     b.Property<string>("OwnerPhoneNumber")
                         .IsRequired()
@@ -134,6 +125,30 @@ namespace RentCar.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("messages");
+                });
+
+            modelBuilder.Entity("RentCar.Models.Entities.Purchase", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CarId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CarId")
+                        .IsUnique();
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("purchases");
                 });
 
             modelBuilder.Entity("RentCar.Models.Entities.User", b =>
@@ -201,11 +216,37 @@ namespace RentCar.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("RentCar.Models.Entities.Purchase", b =>
+                {
+                    b.HasOne("RentCar.Models.Entities.Car", "Car")
+                        .WithOne("Purchase")
+                        .HasForeignKey("RentCar.Models.Entities.Purchase", "CarId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("RentCar.Models.Entities.User", "User")
+                        .WithMany("Purchases")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Car");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("RentCar.Models.Entities.Car", b =>
+                {
+                    b.Navigation("Purchase");
+                });
+
             modelBuilder.Entity("RentCar.Models.Entities.User", b =>
                 {
                     b.Navigation("Cars");
 
                     b.Navigation("Messages");
+
+                    b.Navigation("Purchases");
                 });
 #pragma warning restore 612, 618
         }

@@ -162,6 +162,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "RentCar.Controllers.CarController",
+    "Method": "GetPopularAsync",
+    "RelativePath": "api/Car/Popular",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "RentCar.Controllers.MessageController",
     "Method": "CreateAsync",
     "RelativePath": "api/Message",
@@ -172,6 +182,22 @@
       {
         "Name": "dto",
         "Type": "RentCar.Models.DTO_s.Message.MessageCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentCar.Controllers.PurchaseController",
+    "Method": "CreateAsync",
+    "RelativePath": "api/Purchase",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "RentCar.Models.DTO_s.Purchase.PurchaseCreateDTO",
         "IsRequired": true
       }
     ],

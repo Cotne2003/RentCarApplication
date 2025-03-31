@@ -13,7 +13,7 @@ using System.Text;
 
 namespace RentCar.Services
 {
-    public class AuthorizationService : IAuthorization
+    public class AuthorizationService : IAuthorizationService
     {
 
         private readonly ApplicationDbContext _context;
@@ -34,6 +34,13 @@ namespace RentCar.Services
             {
                 response.StatusCode = HttpStatusCode.Conflict;
                 response.Message = "User with this email already exists";
+                return response;
+            }
+
+            if (await UserExistsByPhone(dto.PhoneNumber))
+            {
+                response.StatusCode = HttpStatusCode.Conflict;
+                response.Message = "User with this phone number already exists";
                 return response;
             }
 
@@ -61,7 +68,7 @@ namespace RentCar.Services
         {
             ServiceResponse<string> response = new ServiceResponse<string>();
 
-            var user = await _context.users.FirstOrDefaultAsync(x => x.Email.ToLower() == dto.Email.ToLower());
+            var user = await _context.users.FirstOrDefaultAsync(x => x.PhoneNumber == dto.PhoneNumber);
 
             if (user is null)
             {
@@ -97,6 +104,13 @@ namespace RentCar.Services
         private async Task<bool> UserExists(string email)
         {
             if (await _context.users.AnyAsync(x => x.Email.ToLower() == email.ToLower()))
+                return true;
+            return false;
+        }
+
+        private async Task<bool> UserExistsByPhone(string phone)
+        {
+            if (await _context.users.AnyAsync(x => x.PhoneNumber == phone))
                 return true;
             return false;
         }

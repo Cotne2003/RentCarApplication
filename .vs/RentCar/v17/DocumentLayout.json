@@ -3,38 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|c:\\users\\tsotne\\onedrive\\desktop\\rentcar\\rentcar\\services\\carservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|solutionrelative:rentcar\\services\\carservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/DESKTOP_VDBC59J/CarRentDB/True/SqlTable/dbo.users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|c:\\users\\tsotne\\onedrive\\desktop\\rentcar\\rentcar\\services\\purchaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|solutionrelative:rentcar\\services\\purchaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|c:\\users\\tsotne\\onedrive\\desktop\\rentcar\\rentcar\\controllers\\purchasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|solutionrelative:rentcar\\controllers\\purchasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|c:\\users\\tsotne\\onedrive\\desktop\\rentcar\\rentcar\\models\\entities\\purchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|solutionrelative:rentcar\\models\\entities\\purchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|c:\\users\\tsotne\\onedrive\\desktop\\rentcar\\rentcar\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|solutionrelative:rentcar\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|c:\\users\\tsotne\\onedrive\\desktop\\rentcar\\rentcar\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|solutionrelative:rentcar\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/DESKTOP_VDBC59J/CarRentDB/True/SqlTable/dbo.cars.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/DESKTOP_VDBC59J/CarRentDB/True/SqlTable/dbo.users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|c:\\users\\tsotne\\onedrive\\desktop\\rentcar\\rentcar\\models\\dto\u0027s\\car\\carcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|solutionrelative:rentcar\\models\\dto\u0027s\\car\\carcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|c:\\users\\tsotne\\onedrive\\desktop\\rentcar\\rentcar\\controllers\\messagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|solutionrelative:rentcar\\controllers\\messagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|c:\\users\\tsotne\\onedrive\\desktop\\rentcar\\rentcar\\models\\entities\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|solutionrelative:rentcar\\models\\entities\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|c:\\users\\tsotne\\onedrive\\desktop\\rentcar\\rentcar\\models\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|solutionrelative:rentcar\\models\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -48,119 +33,70 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Program.cs",
               "RelativeDocumentMoniker": "RentCar\\Program.cs",
               "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Program.cs",
               "RelativeToolTip": "RentCar\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-30T20:03:12.985Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "RentCar\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Services\\UserService.cs",
-              "RelativeToolTip": "RentCar\\Services\\UserService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACAAAABbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T21:10:40.993Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "dbo.cars [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/DESKTOP_VDBC59J/CarRentDB/True/SqlTable/dbo.cars.sql",
-              "ToolTip": "dbo.cars [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-03-30T21:10:13.473Z",
+              "DocumentIndex": 2,
+              "Title": "PurchaseController.cs",
+              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Controllers\\PurchaseController.cs",
+              "RelativeDocumentMoniker": "RentCar\\Controllers\\PurchaseController.cs",
+              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Controllers\\PurchaseController.cs",
+              "RelativeToolTip": "RentCar\\Controllers\\PurchaseController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADgvxgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T11:40:30.068Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CarService.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Services\\CarService.cs",
-              "RelativeDocumentMoniker": "RentCar\\Services\\CarService.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Services\\CarService.cs",
-              "RelativeToolTip": "RentCar\\Services\\CarService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T20:29:18.801Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "dbo.users [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/DESKTOP_VDBC59J/CarRentDB/True/SqlTable/dbo.users.sql",
               "ToolTip": "dbo.users [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-03-30T21:08:35.027Z",
+              "WhenOpened": "2025-03-31T11:39:37.618Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CarCreateDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Models\\DTO\u0027s\\Car\\CarCreateDTO.cs",
-              "RelativeDocumentMoniker": "RentCar\\Models\\DTO\u0027s\\Car\\CarCreateDTO.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Models\\DTO\u0027s\\Car\\CarCreateDTO.cs",
-              "RelativeToolTip": "RentCar\\Models\\DTO\u0027s\\Car\\CarCreateDTO.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAA8wDgAAAA9AAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Purchase.cs",
+              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Models\\Entities\\Purchase.cs",
+              "RelativeDocumentMoniker": "RentCar\\Models\\Entities\\Purchase.cs",
+              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Models\\Entities\\Purchase.cs",
+              "RelativeToolTip": "RentCar\\Models\\Entities\\Purchase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T21:00:17.956Z",
+              "WhenOpened": "2025-03-31T11:33:56.594Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MessageController.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Controllers\\MessageController.cs",
-              "RelativeDocumentMoniker": "RentCar\\Controllers\\MessageController.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Controllers\\MessageController.cs",
-              "RelativeToolTip": "RentCar\\Controllers\\MessageController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "PurchaseService.cs",
+              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Services\\PurchaseService.cs",
+              "RelativeDocumentMoniker": "RentCar\\Services\\PurchaseService.cs",
+              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Services\\PurchaseService.cs",
+              "RelativeToolTip": "RentCar\\Services\\PurchaseService.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAADgv0kAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T20:57:07.094Z",
+              "WhenOpened": "2025-03-31T11:06:23.581Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Car.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Models\\Entities\\Car.cs",
-              "RelativeDocumentMoniker": "RentCar\\Models\\Entities\\Car.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Models\\Entities\\Car.cs",
-              "RelativeToolTip": "RentCar\\Models\\Entities\\Car.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAuwBoAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T20:31:07.641Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Models\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "RentCar\\Models\\Entities\\User.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Models\\Entities\\User.cs",
-              "RelativeToolTip": "RentCar\\Models\\Entities\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T20:30:57.832Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             }
           ]
         }
